@@ -46,3 +46,247 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+header{
+  background-color: #474747;
+  width: 100%;
+  height:  100px;
+}
+
+.logo_name{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 50px;
+  color: #b886ad;
+  padding-top: 12px;
+  padding-left: 70px;
+  padding-bottom: 12px;
+}
+
+.menu-bar {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.menu-bar span, .menu-bar span:before, .menu-bar span:after {
+  width: 100%;
+  position: absolute;
+  height: 10px;
+  background:#b886ad;
+  display: block;
+  transition: .3s;
+  border-radius: 5px;
+}
+
+.menu-bar span:before{
+  content: "";
+  top: -20px;
+  transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu-bar span{
+top: 20px;
+}
+
+.menu-bar span:after{
+content: "";
+bottom: -20px;
+transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu-bar span.active:before{
+content: "";
+top: 0px;
+transform: rotate(45deg);
+transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
+}
+
+.menu-bar span.active:after{
+content: "";
+bottom: 0;
+transform: rotate(-45deg);
+transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
+}
+
+.menu-bar span.active{
+  background: rgba(255, 255, 255, 0); 
+}
+
+ul{
+list-style: none;
+}
+
+.menu{
+width: 300px;
+height: auto;
+background:#474747;
+padding: 10px;
+position: fixed;
+left: -320px;
+transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+border-radius:0 0 15px 0;
+}
+
+.menu.animate{
+left: 0;
+}
+
+@media(max-width: 380px){
+.menu{
+width: 220px;
+}
+}
+
+.burger-menu_link{
+  text-decoration: none;
+  color: #b886ad;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+}
+
+.burger-menu_link:visited {
+  color: #b886ad;
+}
+
+.burger-menu_link:hover {
+  color: #6d616d;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 750px;
+  font-family: sans-serif;
+  font-size: 72px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+#section-1 {
+  background-image: url(/image/background_section1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #51524f;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#section-2 {
+ background-color: rgba(218, 188, 212, 0.952); 
+ color: #fff;
+ font-family: 'Roboto Mono', monospace;
+}
+
+#section-3 {
+  background-image: url(/image/background_section3.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  color: rgb(113, 153, 125);
+  font-family: 'Roboto Mono', monospace;
+}
+
+#section-4 {
+ background-color: rgb(201, 140, 186); 
+ color: #fff;
+ font-family: 'Roboto Mono', monospace;
+}
+
+#section-5 {
+  background-image: url(/image/background_section5.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #dfa0ff;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#section-6 {
+  background-color: rgb(184, 145, 174); 
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+.slider {
+  z-index: 9;
+  width: 900px;
+  height: 700px;
+  overflow: hidden;
+  margin: 0 0 7px;
+  position: relative;
+  }
+  .slider ul,
+  .slider li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  }
+  .slider ul {
+  width: 9999px; 
+  }
+  .slider ul li {
+  list-style-type: none;
+  float: left;
+  width: 900px;
+  height: 700px;
+  }
+  .slider .nav {
+  position: absolute;
+  left: 15px;
+  bottom: 12px; 
+  }
+  .slider .nav span {
+  opacity: 0.9;
+  background: #fff;
+  margin: 0 8px 0 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+  float: left;
+  box-shadow: 0 1px 2px #000;
+  }
+  .slider .nav span.on {
+  background: #2e302e;
+  }
+
+  footer{
+    background-color:#474747 ;
+    height: 100px;
+  }
+  
+  ul.hr {
+    margin: 0;  
+    padding-left: 170px;  
+    padding-top: 20px;
+  }
+  
+  ul.hr li {
+    display: inline;  
+    margin-right: 50px;
+  }
+  
+  .footer_link{
+    text-decoration:none ;
+    color: #b886ad;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 30px;
+  }
+  
+  .footer_c{
+    color: #b886ad;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 30px;
+  }
+  
+  .footer_link:visited {
+    color: #b886ad;
+  }
+  
+  .footer_link:hover {
+    color: #6d616d;
+  }
